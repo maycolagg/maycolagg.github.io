@@ -1,0 +1,435 @@
+/*CONFIGURAÇÕES INICIAIS*/
+:root {
+    --font-family-standard: Helvetica, Arial, sans-serif;
+    --font-size-standard: 14px;
+    --background-standard: #0b0a0d;
+    --orange: #ff6715;
+    --green: #5AA7B0;
+    --black: #000000;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-standard);
+    font-size: var(--font-size-standard);
+    color: var(--white);
+    width: 100vw;
+    height: 90vh;
+    overflow: hidden;
+    background-color: #000000;
+
+    /* background-image: url(../images/moto_inicio.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% calc(100%);  */
+}
+
+.nav-list {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.link__item {
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.link__item:hover {
+    color: var(--green);
+}
+
+.link__item:last-of-type {
+    padding: 0.5rem;
+    border: 1px solid var(--green);
+    border-radius: 5px;
+    color: var(--green);
+}
+
+.link__item:last-of-type:hover {
+    text-decoration: none;
+}
+
+#selected {
+    pointer-events: none;
+    color: var(--green);
+}
+
+header {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--black);
+}
+
+header img {
+    width: 4.0rem;
+    margin: 0 1.6rem;
+    cursor: pointer;
+}
+
+#content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Área do Mapa */
+.mapBox {
+    width: 70%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+}
+
+#map {
+    width: 95%;
+    height: 95%;
+    border-radius: 20px;
+}
+
+.mapPointer {
+    background-color: rgb(255, 0, 0);
+    /* Cor do círculo */
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Área do Mapa */
+
+/* Área dos Inputs */
+
+.inputBox {
+    width: 30%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(../images/moto_inicio-cor.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% calc(100%);
+    border-radius: 200px 0;
+}
+
+#botoes {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 60%;
+    height: 10%;
+}
+
+#routeButton {
+    width: 60%;
+    height: 80%;
+    margin: 1%;
+}
+
+#choiceIn {
+    width: 40%;
+    height: 80%;
+    margin: 1%;
+}
+
+#origin,
+#destination {
+    width: 100%;
+    padding: 0.5rem 2.2rem 0.5rem 0.5rem;
+    font-size: 1.3rem;
+    margin: 5% 0 5% 0;
+    border: none;
+    border-radius: 12px 0px 0px 0px;
+    outline: 0;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+lord-icon {
+    width: 20%;
+    height: 57.5%;
+    margin: 5% 0 5% 0;
+    background-color: white;
+    border-radius: 0px 12px 12px 0px;
+    /* border: solid 2px #5e5e5e; */
+}
+
+#i-boxTitle {
+    width: 70%;
+    padding: 20px;
+    border-radius: 25px;
+    height: 1;
+    font-size: 2.2rem;
+    margin: 5px;
+    text-align: justify;
+
+}
+
+#title--contrast {
+    padding: 0.15rem;
+    background-color: var(--orange);
+    border-radius: 5px;
+}
+
+.button {
+    width: 13rem;
+
+    cursor: pointer;
+    transition: 0.2s;
+
+    padding: 0.7rem 0;
+    margin: 2rem 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+
+    border: 2px solid var(--orange);
+    border-radius: 5px;
+    color: var(--white);
+    background-color: var(--orange);
+}
+
+.button:hover {
+    transition: 0.2s;
+    background-color: var(--black);
+    border-color: var(--black);
+    color: var(--white);
+}
+
+.button:active {
+    background-color: var(--white);
+    border-color: var(--white);
+    color: var(--black);
+}
+
+.pac-container {
+    background-color: white;
+    box-shadow: none;
+    border-radius: 0 0 20px 20px;
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+}
+
+.pac-item {
+    border: none;
+}
+
+/* Área dos Inputs */
+
+/* Caixa de Informação */
+
+#infoBox {
+    width: 50%;
+    height: 20%;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 2px 5px;
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+
+}
+
+#infoDistance,
+#infoTime,
+#infoPrice {
+
+    width: 100%;
+    height: 30%;
+    margin: 1% 0;
+    padding: 5px;
+    border: 2px solid rgb(87, 87, 87);
+    display: flex;
+    align-items: center;
+    font-size: medium;
+    font-weight: bold;
+    border-radius: 15px 0px 15px 0px;
+
+}
+
+/* Caixa de Informação */
+
+/* Menu do Hamburguer */
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 40px;
+    height: 4px;
+    background: #fff;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        z-index: 1;
+        width: 100vw;
+        height: 20vh;
+        background: #000000;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateY(-160%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}
+
+.nav-list.active {
+    transform: translateY(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-10px, 10px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-8px, -10px);
+}
+
+
+/* Fim do Menu hamburguer */
+
+/* Resposividade */
+
+@media (max-width: 550px) {
+
+    header,
+    header img {
+        height: 60px;
+    }
+
+    #content {
+        flex-direction: column;
+    }
+
+    .mapBox {
+        width: 100%;
+        height: 50%;
+    }
+
+    #map {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .inputBox {
+        width: 100%;
+        height: 50%;
+        border-radius: 0;
+    }
+
+    #botoes {
+        width: 60%;
+        height: 20%;
+    }
+
+    #i-boxTitle {
+        font-size: 25px;
+        /* display: none; */
+    }
+
+    .nav-list {
+        position: absolute;
+        z-index: 1;
+        top: 6%;
+        right: 0;
+        width: 100vw;
+        height: 50vh;
+        background: #000000;
+    }
+
+    .nav-list.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .link__item {
+        width: 90%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+    }
+
+    #startButtonDiv,
+    .button {
+        margin: 2%;
+    }
+
+    #infoBox {
+        width: 80%;
+        height: 40%;
+        margin: 3%;
+    }
+}
+
+/* Resposividade */

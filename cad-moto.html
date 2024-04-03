@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo-cad-moto.css">
+    <link rel="stylesheet" href="css/resp-cad-moto.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,700,0,0" />
+    <title>Cadastro-Funcionario</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <header>Cadastro de funcionário</header>
+        <div class="progress-bar">
+            <div class="step">
+                <p>Info</p>
+
+                <div class="bullet">
+                    <span>1</span>
+                </div>
+
+                <div class="check material-symbols-outlined">done</div>
+            </div>
+            <div class="step">
+                <p>End</p>
+
+                <div class="bullet">
+                    <span>2</span>
+                </div>
+
+                <div class="check material-symbols-outlined">done</div>
+            </div>
+            <div class="step">
+                <p>Moto</p>
+
+                <div class="bullet">
+                    <span>3</span>
+                </div>
+
+                <div class="check material-symbols-outlined">done</div>
+            </div>
+            <div class="step">
+                <p>Login</p>
+
+                <div class="bullet">
+                    <span>4</span>
+                </div>
+
+                <div class="check material-symbols-outlined">done</div>
+            </div>
+        </div>
+        <div class="form-outer">
+            <form action="#">
+
+                <!-- ------------------------ -->
+                <!-- Informações do motorista -->
+                <!-- ------------------------ -->
+                <div class="page slidepage">
+                    <div class="title">Informações do motorista:</div>
+
+                    <div class="field">
+                        <div class="label">Nome do motorista</div>
+                        <input type="text" placeholder="Seu nome aqui">
+                    </div>
+
+                    <div class="field">
+                        <div class="label">CPF</div>
+                        <input type="text" placeholder="Formato: xxx.xxx.xxx-xx">
+                    </div>
+
+                    <div class="field">
+                        <div class="label">Telefone</div>
+                        <input type="tel" placeholder="Formato (xx) xxxxx-xxxx">
+                    </div>
+
+                    <div class="field">
+                        <div class="label">Data de Nascimento</div>
+                        <input type="date">
+                    </div>
+
+                    <div class="field">
+                        <div class="label">Número da CNH</div>
+                        <input type="number">
+                    </div>
+
+                    <div class="field nextBtn">
+                        <button>Prosseguir</button>
+                    </div>
+                </div>
+
+                <!-- --------------------- -->
+                <!-- Endereço do motorista -->
+                <!-- --------------------- -->
+                <div class="page">
+                    <div class="title">Endereço do motorista:</div>
+
+                    <div class="field">
+                        <div class="label">logradouro</div>
+                        <input type="text" placeholder="Nome do logradouro">
+                    </div>
+
+                    <div class="field">
+                        <div class="label">Bairro</div>
+                        <input type="text" placeholder="Nome do bairro">
+                    </div>
+
+                    <div class="field">
+                        <div class="label">número</div>
+                        <input type="text" placeholder="Número casa/apartamento">
+                    </div>
+
+                    <div class="field">
+                        <div class="label">cidade</div>
+                        <input type="text" placeholder="Nome da cidade">
+                    </div>
+
+                    <div class="field">
+                        <div class="label">CEP</div>
+                        <input type="number" placeholder="Formato xxxxx-xxx">
+                    </div>
+
+                    <div class="field btns">
+                        <button class="prev-1 prev">Voltar</button>
+                        <button class="next-1 next">Prosseguir</button>
+                    </div>
+                </div>
+
+                <!-- ---------------------- -->
+                <!-- Informações do veículo -->
+                <!-- ---------------------- -->
+                <div class="page">
+                    <div class="title">Informações do veículo:</div>
+
+                    <div class="field">
+                        <div class="label">Placa</div>
+                        <input type="text" placeholder="Placa da moto">
+                    </div>
+
+                    <div class="field">
+                        <div class="label">Chassi</div>
+                        <input type="number" placeholder="Chassi da moto">
+                    </div>
+
+                    <div class="field">
+                        <div class="label">Renavam</div>
+                        <input type="text" placeholder="Renavam da moto">
+                    </div>
+
+                    <div class="field btns">
+                        <button class="prev-2 prev">Voltar</button>
+                        <button class="next-2 next">Prosseguir</button>
+                    </div>
+                </div>
+
+                <!-- -------------------- -->
+                <!-- Informações para login -->
+                <!-- -------------------- -->
+                <div class="page">
+                    <div class="title">Informações para login:</div>
+
+                    <div class="field">
+                        <div class="label">email</div>
+                        <input type="text" placeholder="Seu email aqui">
+                    </div>
+
+                    <div class="field">
+                        <div class="label">Senha</div>
+                        <input type="text" placeholder="Sua senha aqui">
+                    </div>
+
+                    <div class="field btns">
+                        <button class="prev-3 prev">Voltar</button>
+                        <button class="submit">Enviar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/cad-moto.js"></script>
+</body>
+
+</html>

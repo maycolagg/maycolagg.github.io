@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="css/responsive-search.css"> -->
+    <link rel="icon" href="images/logo.png">
+    <title>GoMoto - MotoTaxi</title>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA65ggilWe2g9cta4LPBOx7AMgQ5K3yBq4&libraries=places&callback=initMap"
+        async defer></script>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html"><img src="images/logo.png" id="header__img" alt="Logo"></a>
+
+        <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+
+        <div class="nav-list">
+            <a href="index.html" class="link__item" id="selected">Início</a>
+            <a href="#" class="link__item">Trabalhe Conosco</a>
+            <a href="#" class="link__item">Entrar</a>
+            <a href="#" class="link__item">Registrar</a>
+        </div>
+    </header>
+
+    <div id="content">
+
+        <div class="inputBox">
+
+            <h1 id="i-boxTitle">Digite o seu <label id="title--contrast">Local</label> e o seu <label
+                    id="title--contrast">Destino</label> abaixo.</h1>
+
+            <div class="input-container">
+                <input id="origin" type="text" placeholder="Seu Local" required>
+                <lord-icon src="https://cdn.lordicon.com/ftndcppj.json" trigger="hover" colors="primary:#545454,
+                    secondary:#ebe6ef">
+                </lord-icon>
+
+            </div>
+
+            <div class="input-container">
+                <input id="destination" type="text" placeholder="Destino" required>
+                <!-- <lord-icon
+                    src="https://cdn.lordicon.com/heexevev.json" trigger="morph" state="morph-mantion">
+                </lord-icon> -->
+                <lord-icon src="https://cdn.lordicon.com/tdtlrbly.json" trigger="hover"
+                    colors="primary:#545454,secondary:#848484" stroke="bold"></lord-icon>
+
+            </div>
+
+            <div id="infoBox" style="display:none;">
+                <div id="infoDistance"></div>
+                <div id="infoTime"></div>
+                <div id="infoPrice"></div>
+            </div>
+            <!--Esse vai mostrar as informações da Viagem: Distância, Tempo e Valor-->
+
+            <div id="botoes">
+                <button onclick="showRoute()" class="button" id="routeButton">Traçar Rota</button>
+                <button onclick="activateChoiceInMap()" class="button" id="choiceIn">Escolha no Mapa</button>
+            </div>
+
+            <div id="startButtonDiv" style="display:none;">
+                <button class="button" onclick="startNavigation()">Confirmar Percurso</button>
+            </div>
+
+        </div>
+
+        <div class="mapBox">
+            <div id="map"></div>
+        </div>
+
+    </div>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

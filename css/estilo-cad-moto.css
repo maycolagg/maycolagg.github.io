@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    font-family: var(--font-family-standard);
+    font-size: var(--font-size-standard);
+    background-color: var(--black);
+    color: var(--black);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    background: url(../img/fundo-motoca.jpg),-webkit-linear-gradient(70deg,#fa600d ,#d35612, #1a1919, #000);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+:root {
+    --font-family-standard: Helvetica, Arial, sans-serif;
+    --font-size-standard: 13px;
+    --background-standard: #0b0a0d;
+    --orange: #ff6715;
+    --green: #5AA7B0;
+    --black: #000000;
+    --white: #ffffff;
+}
+
+.container {
+    width: 330px;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px 20px 0px 20px;
+}
+
+.container header {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+}
+
+.container .form-outer {
+    width: 100%;
+    /* background-color: tomato; */
+    overflow: hidden;
+}
+
+.form-outer form {
+    display: flex;
+    width: 400%;
+}
+
+.form-outer form .page {
+    width: 25%;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.form-outer form .page .title {
+    text-align: left;
+    font-size: 22px;
+    font-weight: 500;
+    /* margin-bottom: 30px; */
+    padding-bottom: 15px;
+    /* background-color: tan; */
+}
+
+.form-outer form .page .field {
+    height: 43px;
+    width: 330px;
+    /* background-color: tomato; */
+    margin: 20px 0;
+    display: flex;
+    position: relative;
+}
+
+.form-outer form .page .field .label {
+    position: absolute;
+    top: -18px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.form-outer form .page .field input {
+    height: 97%;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 15px;
+    padding-left: 15px;
+}
+
+.form-outer form .page .field button {
+    width: 100%;
+    height: calc(100% + 5px);
+    margin-top: -20px;
+
+    border: none;
+    background-color: #ea6015f8;
+    border-radius: 5px;
+    color: var(--white);
+
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.form-outer form .page .field button:hover {
+    /* background-color: #ff5900; */
+    background-color: #000000;
+}
+
+
+.form-outer form .page .btns button {
+    margin-top: -20px!important;
+}
+
+
+form .page .btns button.prev {
+    margin-right: 3px;
+    font-size: 17px;
+}
+
+form .page .btns button.next {
+    margin-left: 3px;
+}
+
+/* .container {
+    background: url(../img/fundo-motoca.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
+
+.container .progress-bar {
+    display: flex;
+    margin: 10px 0;
+}
+
+.container .progress-bar .step {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.progress-bar .step p {
+    font-size: 16px;
+    font-family: 500;
+    margin-bottom: 8px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.progress-bar .step p.active {
+    color: var(--orange);
+}
+
+.progress-bar .step .bullet {
+    position: relative;
+    height: 25px;
+    width: 25px;
+    border: 2px solid var(--background-standard);
+    display: inline-block;
+    border-radius: 50%;
+
+    transition: 0.2s;
+}
+
+.progress-bar .step .bullet.active {
+    border-color: var(--orange);
+    background-color: var(--orange);
+}
+
+.progress-bar .step:last-child .bullet::before,
+.progress-bar .step:last-child .bullet::after {
+    display: none;
+}
+
+
+.progress-bar .step .bullet::before,
+.progress-bar .step .bullet::after {
+    position: absolute;
+    content: '';
+    bottom: 11px;
+    right: -51px;
+    height: 3px;
+    width: 44px;
+    background: #1a1919;
+}
+
+.progress-bar .step .bullet.active::after {
+    background-color: var(--orange);
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 0.3s linear forwards;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.progress-bar .step .bullet span {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.progress-bar .step .bullet.active span {
+    display: none;
+}
+
+.progress-bar .step .check {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.progress-bar .step .check.active {
+    display: block;
+    color: white;
+}
