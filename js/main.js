@@ -40,10 +40,6 @@ function initMap() {
 
   const options = { componentRestrictions: { country: 'BR' } };
 
-  GoogleMapOptions optionsMap = new GoogleMapOptions();
-  optionsMap.compassEnabled(true);
-
-
   new google.maps.places.Autocomplete(originInput, options);
   new google.maps.places.Autocomplete(destinationInput, options);
 
