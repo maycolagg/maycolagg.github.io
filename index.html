@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
     <!-- <link rel="stylesheet" href="css/responsive-search.css"> -->
     <link rel="icon" href="images/icon.png">
     <title>GoMoto - MotoTaxi</title>
@@ -14,8 +14,11 @@
 <body>
 
     <header>
-        <a href="main.html"><img src="images/logo.png" id="header__img" alt="Logo"></a>
-        <a href="#" class="userStatus" style="display: non">PASSAGEIRO</a>
+
+        <div id="headerLogo">
+            <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+            <a href="#" class="userStatus" style="display: non">PASSAGEIRO</a>
+        </div>
 
         <div class="mobile-menu">
             <div class="line1"></div>
@@ -25,8 +28,8 @@
 
         <div class="nav-list">
             <!-- <a href="#" class="link__item" id="selected">Início</a> -->
+            <a href="https://api.whatsapp.com/send/?phone=5535900000000&text=Oi%20GoMoto&type=phone_number&app_absent=0" class="link__item">Contato</a>
             <a href="#" class="link__item">Trabalhe Conosco</a>
-            <!-- <a href="#" class="link__item">Entrar</a> -->
             <!-- <a href="#" class="link__item">Registrar</a> -->
         </div>
     </header>
@@ -38,20 +41,40 @@
             <div class="boxTitle">
                 <div id="title">DESCUBRA O PODER DA MOBILIDADE <label id="title--contrast">ÁGIL</label></div>
             </div>
-            <!-- <h1 id="title">DESCUBRA O PODER DA MOBILIDADE <label id="title--contrast">ÁGIL</label></h1> -->
+            <div class="shadowboxButton">
+                <p id="buttonTitle">Cadastre-se e aproveite as <label id="title--contrast">vantagens</label> GoMoto:</p>
+            </div>
             <div class="boxButton">
-                <a href="cad-moto.html" class="button" id="registerButton">REGISTRAR</a>
+                <a href="cad-moto.html" class="button" id="registerButton">CADASTRAR</a>
                 <a href="main.html" class="button" id="loginButton">ENTRAR</a>
             </div>
 
         </div>
 
-        <div id="midContent"></div>
-        <!-- <div class="mapBox"></div> -->
+        <div id="midContent">
+            <div id="midTitle">Conheça um pouco <label id="title--contrast">Mais</label> Sobre Nós</div>
+        </div>
+        <div id="bothContent">
+            <div id="midTitle">As vantagens de <label id="title--contrast">Utilizar</label> o nosso serviço</div>
+        </div>
+
+        <div id="footer">
+
+            <div id="footerHead"><img src="images/logo.png" alt="Logo"></div>
+
+            <div id="footerContainer">
+                <div class="footerContent"></div>
+                <div class="footerContent"></div>
+                <div class="footerContent"></div>
+            </div>
+            <p>All Rigths Reserved to Pytorm Development.</p>
+            
+        </div>
+
 
     </div>
 
-    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
 
 </body>
 
