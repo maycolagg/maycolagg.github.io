@@ -12,6 +12,20 @@
     --lightGrey: #484848;
 }
 
+html ::-webkit-scrollbar {
+    width: 5px;
+}
+
+html ::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background: var(--orange);
+}
+
+html ::-webkit-scrollbar-track {
+    background: #ededed;
+    border-radius: 50px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -23,10 +37,7 @@ body {
     font-size: var(--font-size-standard);
     color: var(--white);
     background-color: var(--grey);
-    /* background-position: left 70% bottom 100%;
-    background-image: url(../images/fundo.png);
-    background-size: 100%;
-    background-repeat: no-repeat; */
+    overflow: hidden;
 }
 
 .nav-list {
@@ -77,12 +88,20 @@ header {
     width: 100%;
     height: 80px;
     display: flex;
-    position: absolute;
+    /* position: absolute; */
     z-index: 999;
     justify-content: space-between;
     align-items: center;
     background-color: var(--grey);
-    position: fixed;
+    /* position: fixed; */
+}
+
+#headerLogo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 
 header img {
@@ -93,26 +112,54 @@ header img {
 
 #content {
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 80px);
     scroll-snap-type: y mandatory;
+    overflow-x: hidden;
     overflow-y: scroll;
 }
 
 #topContent {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
+    scroll-snap-align: start;
     flex-direction: column;
     justify-content: center;
     position: relative;
-    scroll-snap-align: start;
+
+    background-image: url(../images/fundoA.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-bottom: 5px solid var(--lightGrey);
 }
 
 #midContent {
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    display: flex;
     scroll-snap-align: start;
+    flex-direction: column;
+    position: relative;
 
+    background-image: url(../images/fundoB.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#bothContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    scroll-snap-align: start;
+    flex-direction: column;
+    position: relative;
+
+    background-image: url(../images/fundoC.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .boxTitle {
@@ -131,8 +178,34 @@ header img {
     font-weight: bolder;
     text-align: justify;
     width: 100%;
-    margin: 0 30% 0 5%;
+    margin: 0 20% 0 5%;
     word-spacing: 30px;
+}
+
+.shadowboxButton {
+    width: 40%;
+    height: 20%;
+    position: absolute;
+    bottom: 7%;
+    padding: 20px 30px;
+    background-color: var(--darkGrey);
+    border-radius: 0 60px 0 0;
+}
+
+#buttonTitle {
+    text-align: justify;
+    word-spacing: 2px;
+}
+
+#midTitle {
+    position: absolute;
+    font-weight: bolder;
+    text-align: justify;
+    width: 100%;
+    margin: 0 30% 0 3%;
+    top: 50px;
+    font-size: 30px;
+    word-spacing: 10px;
 }
 
 .boxButton {
@@ -146,8 +219,57 @@ header img {
     justify-content: space-around;
     background-color: var(--lightGrey);
     border-radius: 0 60px 0 0;
-    box-shadow: 0 -60px 0px 0 var(--darkGrey);
 }
+
+#footer {
+    width: 100%;
+    height: 40%;
+    position: relative;
+    scroll-snap-align: start;
+    justify-content: center;
+
+    background-color: var(--darkGrey);
+}
+
+#footerHead {
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#footerHead img {
+    width: 50px;
+    height: 50px;
+}
+
+#footerContainer {
+    width: 100%;
+    height: 75%;
+    top: 20%;
+    padding: 10px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.footerContent {
+    width: 100%;
+    height: 80%;
+    border-right: 2px solid var(--lightGrey);
+}
+
+#footer p{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    bottom: 5px;
+    justify-content: center;
+}
+
 
 #title--contrast {
     padding: 0.15rem;
@@ -189,9 +311,6 @@ header img {
     color: var(--black);
 }
 
-
-/* L area */
-
 /* Menu do Hamburguer */
 
 .nav-list {
@@ -218,12 +337,13 @@ header img {
 
     .nav-list {
         position: absolute;
-        top: 10%;
+        top: 8%;
         right: 0;
         z-index: 1;
         width: 100vw;
         height: 20vh;
-        background: #000000;
+        background: var(--grey);
+        border-bottom: 10px solid var(--lightGrey);
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
@@ -273,7 +393,9 @@ header img {
 
 @media (max-width: 550px) {
 
-    body {
+    #topContent,
+    #midContent,
+    #bothContent {
         background-image: none;
     }
 
@@ -286,11 +408,12 @@ header img {
     .nav-list {
         position: absolute;
         z-index: 1;
-        top: 6%;
+        top: 8%;
         right: 0;
         width: 100vw;
-        height: 50vh;
-        background: #000000;
+        height: 30vh;
+        background: var(--grey);
+        border-bottom: 10px solid var(--lightGrey);
     }
 
     .nav-list.active {
@@ -305,6 +428,7 @@ header img {
         justify-content: center;
         align-items: center;
         border-radius: 5px;
+        border: 2px solid var(--lightGrey);
     }
 
     .button {
@@ -317,15 +441,22 @@ header img {
 
     }
 
-    #title {
+    #title,
+    #midTitle {
         font-size: 30px;
-        width: 100%;
+        width: 90%;
         text-align: justify;
     }
 
-    .boxButton {
+
+    .boxButton,
+    .shadowboxButton {
         width: 90%;
         height: 20%;
+    }
+
+    .shadowboxButton p {
+        width: 80%;
     }
 }
 
