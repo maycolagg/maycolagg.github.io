@@ -262,6 +262,10 @@ header img {
     border-right: 2px solid var(--lightGrey);
 }
 
+.footerContent:last-of-type {
+    border: none;
+}
+
 #footer p{
     width: 100%;
     position: absolute;
