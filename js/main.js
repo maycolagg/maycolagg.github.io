@@ -147,7 +147,7 @@ function showRoute() {
       const { text: distance } = route.legs[0].distance;
       const { text: duration } = route.legs[0].duration;
       const distanceValue = route.legs[0].distance.value;
-      const valorKm = 0.80;
+      const valorKm = 1;
       const fixedValue = 5;
 
       directionsRenderer.setDirections(response);
